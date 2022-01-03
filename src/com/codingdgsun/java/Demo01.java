@@ -5,9 +5,13 @@ import java.util.Random;
 /**
  * @author SunJie
  * @Description
- * @Project: JavaPrimary
- * @Package com.codingdgsun.main.java.demo04
+ * @Project: bilibili
+ * @Package com.codingdgsun.java
  * @date 2022/1/1 8:48 AM
+ */
+
+/**
+ * 01 Java中获取随机整数
  */
 public class Demo01 {
     public static void main(String[] args) {
