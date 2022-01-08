@@ -41,7 +41,7 @@ public class Demo06 {
         for (int array : arrays) {
             sum += array;
         }
-        System.out.println("数组总和为：" + sum);
+//        System.out.println("数组总和为：" + sum);
 
         int index = getCenterIndex(sum, arrays);
         System.out.println("数组中心下标为：" + index);
@@ -50,10 +50,12 @@ public class Demo06 {
     private static int getCenterIndex(int sum, int[] arrays) {
         int leftSum = 0;
         for (int i = 0; i < arrays.length; i++) {
+            //[2, 5, 3, 4, 3] -> arrays[2] = 3, leftSum = 7 + arrays[2] = 7 + 3 = 10
             leftSum = leftSum + arrays[i];//中心坐标元素值+中心坐标左侧所有数组之和
-            if (leftSum == sum) {
+            if (leftSum == sum) {//[0,0] sum=0, leftSum = 0 -> 0为中心下标
                 return i;
             }
+            //[2, 5, 3, 4, 3] -> arrays[1] = 5; sum = 17 -2 -5 = 10, leftSum = 2 + 5 =7,
             sum = sum - arrays[i];//中心坐标元素值+中心坐标右侧所有数组之和
         }
         return -1;
